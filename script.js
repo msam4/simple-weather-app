@@ -16,6 +16,17 @@ searchButton.addEventListener('click', () => {
   }
 });
 
+locationInput.addEventListener('keydown', (event) => {
+  // console.log("Key pressed");
+  if (event.key === 'Enter') {
+    const location = locationInput.value;
+    if (location) {
+      fetchWeather(location);
+      // console.log("Location received!");
+    }
+  }
+});
+
 function fetchWeather(location) {
   const url = `${apiUrl}?q=${location}&appid=${apiKey}&units=metric`;
 
