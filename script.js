@@ -35,6 +35,9 @@ function fetchWeather(location) {
     .then(data => {
       locationElement.textContent = data.name;
       temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
+      // In the future: Make an if (or when/case?) statement using data.main. If main == "rain", change the background image to a rain image.
+      // You need to add an id name background to the body element in html file. Add a const called backgroundElement = document.getElementById('background')
+      // Add the if statment here?? Then, be sure to take each result and insertHTMLAdjacent? to call it back into the html file.
       descriptionElement.textContent = data.weather[0].description;
     })
     .catch(error => {
