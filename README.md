@@ -7,6 +7,7 @@ A simple weather app that checks the weather in a city.
 <br>
 
    
+If the app is not working, then the API key is deactivated at the moment.
 
 ## Getting Started
 ### Setup
